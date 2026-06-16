@@ -46,7 +46,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):  # type: ignore[call
             )
         )
         ai_task_selector = selector.EntitySelector(
-            selector.EntitySelectorConfig(domain=["ai_task"])
+            selector.EntitySelectorConfig(domain=["ai_task", "conversation"])
         )
         token_selector = selector.TextSelector(
             selector.TextSelectorConfig(type=selector.TextSelectorType.PASSWORD)

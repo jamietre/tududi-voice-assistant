@@ -42,20 +42,21 @@ class HomeAssistantLLMAPI:
         )
         prompt = self._format_messages_to_prompt(messages)
 
-        request_payload: Dict[str, Any] = {
-            "entity_id": self._entity_id,
-            "task_name": self._derive_task_name(task_description),
-            "instructions": prompt,
-        }
-
         try:
-            response = await self._hass.services.async_call(
-                "ai_task",
-                "generate_data",
-                request_payload,
-                blocking=True,
-                return_response=True,
-            )
+            if self._entity_id.startswith("conversation."):
+                response = await self._call_conversation_agent(prompt)
+            else:
+                response = await self._hass.services.async_call(
+                    "ai_task",
+                    "generate_data",
+                    {
+                        "entity_id": self._entity_id,
+                        "task_name": self._derive_task_name(task_description),
+                        "instructions": prompt,
+                    },
+                    blocking=True,
+                    return_response=True,
+                )
         except Exception as err:  # noqa: BLE001
             _LOGGER.error("LLM service call failed: %s", err)
             return None
@@ -74,6 +75,23 @@ class HomeAssistantLLMAPI:
             task_data.get("name", "Unknown"),
         )
         return {"task_data": task_data}
+
+    async def _call_conversation_agent(self, prompt: str) -> Optional[Dict[str, Any]]:
+        """Call a conversation agent and return a response dict compatible with _parse_llm_response."""
+        svc_response = await self._hass.services.async_call(
+            "conversation",
+            "process",
+            {"agent_id": self._entity_id, "text": prompt},
+            blocking=True,
+            return_response=True,
+        )
+        text = (
+            svc_response.get("response", {})
+            .get("speech", {})
+            .get("plain", {})
+            .get("speech", "")
+        )
+        return {"response": text}
 
     def _parse_llm_response(self, response: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         if not response:
