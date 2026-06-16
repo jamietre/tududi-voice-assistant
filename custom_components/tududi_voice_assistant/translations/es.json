@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Asistente de voz Tududi",
+        "description": "Configura la integración del asistente de voz de Tududi",
+        "data": {
+          "tududi_url": "URL base de Tududi",
+          "tududi_api_key": "Token API de Tududi",
+          "ai_task_entity": "Entidad de tarea de IA",
+          "voice_correction": "Habilitar corrección de texto de reconocimiento de voz (recomendado)",
+          "default_due_date": "Fecha de vencimiento predeterminada si no se especifica (solo cuando no hay proyecto mencionado)",
+          "auto_voice_tag": "Agregar automáticamente la etiqueta 'voice' a tareas creadas por esta integración",
+          "": "Habilitar asignación de usuarios",
+          "detailed_response": "Habilitar respuesta detallada hablada (incluye proyecto, etiquetas, fecha, asignado, prioridad y repetición)"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigurar asistente de voz Tududi",
+        "description": "Actualiza la configuración de la integración del asistente de voz de Tududi",
+        "data": {
+          "tududi_url": "URL base de Tududi",
+          "tududi_api_key": "Token API de Tududi",
+          "ai_task_entity": "Entidad de tarea de IA",
+          "voice_correction": "Habilitar corrección de texto de reconocimiento de voz (recomendado)",
+          "default_due_date": "Fecha de vencimiento predeterminada si no se especifica (solo cuando no hay proyecto mencionado)",
+          "auto_voice_tag": "Agregar automáticamente la etiqueta 'voice' a tareas creadas por esta integración",
+          "": "Habilitar asignación de usuarios",
+          "detailed_response": "Habilitar respuesta detallada hablada (incluye proyecto, etiquetas, fecha, asignado, prioridad y repetición)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No se pudo conectar a la API de Tududi; verifica la URL y el token.",
+      "llm_conn_error": "No se pudo procesar la tarea con el servicio de IA de Home Assistant."
+    },
+    "abort": {
+      "already_configured": "Esta cuenta de Tududi ya está configurada.",
+      "reconfigure_entry_not_found": "No se pudo encontrar la entrada de configuración para reconfigurar.",
+      "reconfigure_successful": "Configuración actualizada correctamente."
+    }
+  }
+}

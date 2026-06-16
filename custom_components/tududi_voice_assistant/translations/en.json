@@ -1,0 +1,41 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tududi voice assistant",
+        "description": "Set up the Tududi voice assistant integration",
+        "data": {
+          "tududi_url": "Tududi base URL",
+          "tududi_api_key": "Tududi API Token",
+          "ai_task_entity": "AI Task entity",
+          "voice_correction": "Enable speech recognition text correction (recommended)",
+          "default_due_date": "Default due date if none specified (applies only when no project is mentioned)",
+          "auto_voice_tag": "Automatically add a 'voice' tag to tasks created via this integration",
+          "detailed_response": "Enable detailed spoken response (includes project, tags, due date, priority & recurrence info)"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Tududi voice assistant",
+        "description": "Update the Tududi voice assistant integration",
+        "data": {
+          "tududi_url": "Tududi base URL",
+          "tududi_api_key": "Tududi API Token",
+          "ai_task_entity": "AI Task entity",
+          "voice_correction": "Enable speech recognition text correction (recommended)",
+          "default_due_date": "Default due date if none specified (applies only when no project is mentioned)",
+          "auto_voice_tag": "Automatically add a 'voice' tag to tasks created via this integration",
+          "detailed_response": "Enable detailed spoken response (includes project, tags, due date, priority & recurrence info)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Tududi API, please check your URL and API token.",
+      "llm_conn_error": "Failed to process the task using Home Assistant's AI pipeline."
+    },
+    "abort": {
+      "already_configured": "This Tududi instance is already configured.",
+      "reconfigure_entry_not_found": "The configuration entry to reconfigure could not be found.",
+      "reconfigure_successful": "Configuration updated successfully."
+    }
+  }
+}

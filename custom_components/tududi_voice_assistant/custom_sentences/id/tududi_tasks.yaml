@@ -1,0 +1,9 @@
+language: "id"
+intents:
+  TududiAddTask:
+    data:
+      - sentences:
+          - "[tolong|mohon|silakan|saya mau|saya ingin|bisa|coba] (tambah|tambahkan|buat|buatkan|bikin|bikinkan|masukkan|set) [sebuah|satu|tugas|task|satu tugas|sebuah tugas|baru] [baru|cepat|sederhana|harian|mingguan] (tugas|task|to-do|todo|pekerjaan) {task_description}"
+lists:
+  task_description:
+    wildcard: true

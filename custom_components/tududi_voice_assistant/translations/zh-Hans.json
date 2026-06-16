@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tududi 语音助手",
+        "description": "设置 Tududi 语音助手集成",
+        "data": {
+          "tududi_url": "Tududi 基础 URL",
+            "tududi_api_key": "Tududi API 令牌",
+            "ai_task_entity": "AI 任务实体",
+            "voice_correction": "启用语音识别文本纠正 (推荐)",
+            "default_due_date": "当未指定且没有项目时的默认截止日期",
+            "auto_voice_tag": "为通过此集成创建的任务自动添加 'voice' 标签",
+            "": "启用用户分配",
+            "detailed_response": "启用详细语音反馈（包含项目、标签、截止日期、执行者、优先级与重复信息）"
+        }
+      },
+      "reconfigure": {
+        "title": "重新配置 Tududi 语音助手",
+        "description": "更新 Tududi 语音助手集成配置",
+        "data": {
+          "tududi_url": "Tududi 基础 URL",
+          "tududi_api_key": "Tududi API 令牌",
+          "ai_task_entity": "AI 任务实体",
+          "voice_correction": "启用语音识别文本纠正 (推荐)",
+          "default_due_date": "当未指定且没有项目时的默认截止日期",
+          "auto_voice_tag": "为通过此集成创建的任务自动添加 'voice' 标签",
+          "": "启用用户分配",
+          "detailed_response": "启用详细语音反馈（包含项目、标签、截止日期、执行者、优先级与重复信息）"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接到 Tududi API，请检查 URL 和 API 令牌。",
+      "llm_conn_error": "无法通过 Home Assistant 的 AI 服务处理此任务。"
+    },
+    "abort": {
+      "already_configured": "该 Tududi 帐号已配置。",
+      "reconfigure_entry_not_found": "找不到要重新配置的配置条目。",
+      "reconfigure_successful": "配置已成功更新。"
+    }
+  }
+}

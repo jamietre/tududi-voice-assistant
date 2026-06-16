@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Asisten suara Tududi",
+        "description": "Atur integrasi asisten suara Tududi",
+        "data": {
+          "tududi_url": "URL dasar Tududi",
+          "tududi_api_key": "Token API Tududi",
+          "ai_task_entity": "Entitas tugas AI",
+          "voice_correction": "Aktifkan koreksi teks pengenalan suara (disarankan)",
+          "default_due_date": "Tanggal jatuh tempo default jika tidak ditentukan (hanya saat tidak ada proyek disebut)",
+          "auto_voice_tag": "Otomatis tambahkan label 'voice' ke tugas yang dibuat melalui integrasi ini",
+          "": "Aktifkan penugasan pengguna",
+          "detailed_response": "Aktifkan respons suara terperinci (termasuk proyek, label, jatuh tempo, penerima tugas, prioritas & pengulangan)"
+        }
+      },
+      "reconfigure": {
+        "title": "Konfigurasi ulang asisten suara Tududi",
+        "description": "Perbarui konfigurasi integrasi asisten suara Tududi",
+        "data": {
+          "tududi_url": "URL dasar Tududi",
+          "tududi_api_key": "Token API Tududi",
+          "ai_task_entity": "Entitas tugas AI",
+          "voice_correction": "Aktifkan koreksi teks pengenalan suara (disarankan)",
+          "default_due_date": "Tanggal jatuh tempo default jika tidak ditentukan (hanya saat tidak ada proyek disebut)",
+          "auto_voice_tag": "Otomatis tambahkan label 'voice' ke tugas yang dibuat melalui integrasi ini",
+          "": "Aktifkan penugasan pengguna",
+          "detailed_response": "Aktifkan respons suara terperinci (termasuk proyek, label, jatuh tempo, penerima tugas, prioritas & pengulangan)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Gagal terhubung ke API Tududi, periksa URL dan token.",
+      "llm_conn_error": "Gagal memproses tugas dengan layanan AI Home Assistant."
+    },
+    "abort": {
+      "already_configured": "Akun Tududi ini sudah dikonfigurasi.",
+      "reconfigure_entry_not_found": "Entri konfigurasi untuk dikonfigurasi ulang tidak ditemukan.",
+      "reconfigure_successful": "Konfigurasi berhasil diperbarui."
+    }
+  }
+}

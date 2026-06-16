@@ -1,0 +1,9 @@
+language: "es"
+intents:
+  TududiAddTask:
+    data:
+      - sentences:
+          - "[quiero|quisiera|por favor|puedes] (añade|añadir|agrega|agregar|crea|crear|pon|poner) [una|un|la|el|nuevo|nueva|mi|nueva tarea|nuevo tarea] [nueva|rápida|simple|diaria|semanal] (tarea|tarea de|to-do|todo|task) {task_description}"
+lists:
+  task_description:
+    wildcard: true

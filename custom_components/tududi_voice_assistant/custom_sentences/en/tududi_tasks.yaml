@@ -1,0 +1,18 @@
+# syntax documentation:
+# https://developers.home-assistant.io/docs/voice/intent-recognition/template-sentence-syntax/#sentence-templates-syntax
+#
+# Examples:
+#   "Add a task buy milk"
+#   "Create a task buy milk to the shopping project"
+#   "Add a task call dentist for work by Friday"
+#   "Add an urgent task finish report for the work project"
+language: "en"
+intents:
+  TududiAddTask:
+    data:
+      - sentences:
+          - "[I | I'd | I'll | I'm | I want to | I would like to | I need to | let's | please | can you | could you] (add | ad | at | and | had | app | create | crate | great | grade | make | mate | have | set | put | do | get | dad | head | insert | schedule | fake | creates | what's) [a | an | the | this | that | my | new | one] [new | upcoming | quick | simple | daily | weekly | rapid | urgent] (task | tasker | tusk | ask | tests | tasks | to do | to-do | todo | task for | item | thing) {task_description}"
+
+lists:
+  task_description:
+    wildcard: true
