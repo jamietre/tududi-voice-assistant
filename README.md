@@ -4,11 +4,11 @@
 # Tududi Voice Assistant for Home Assistant
 
 A Home Assistant custom component that lets you create tasks in [Tududi](https://github.com/chrisvel/tududi) by voice.
-</div>
 
 Say **"add a task buy milk"** or **"create a task call dentist for the work project tomorrow"** — the task lands in Tududi instantly.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[MIT License](LICENSE)
+</div>
 
 ---
 
