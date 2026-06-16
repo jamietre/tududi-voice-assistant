@@ -1,5 +1,5 @@
 <div align="center">
-<img src="logo.png" alt="Tududi logo" width="120" />
+<img src="https://raw.githubusercontent.com/jamietre/tududi-voice-assistant/main/logo.png" alt="Tududi logo" width="120" />
 
 # Tududi Voice Assistant for Home Assistant
 
